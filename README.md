@@ -54,32 +54,32 @@ happens.
 > **Note:** don’t copy-paste! If you copy paste these lines, some of them won’t
 > run correctly. Type them out by hand - it’s better practice anyway.
 
-| Line                | Expected Result | Actual Result | Were you right? Why? |
-| ------------------- | --------------- | ------------- | -------------------- |
-| `2 + 2`             |                 |               |                      |
-| `5 - 3`             |                 |               |                      |
-| `3 * 6`             |                 |               |                      |
-| `10 / 2`            |                 |               |                      |
-| `5 / 2`             |                 |               |                      |
-| `5.0 / 2`           |                 |               |                      |
-| `“hello” + “world”` |                 |               |                      |
-| `“Hello” - “world”` |                 |               |                      |
-| `3 + “3”`           |                 |               |                      |
-| `typeof “hello”`    |                 |               |                      |
-| `typeof 13`         |                 |               |                      |
-| `typeof true`       |                 |               |                      |
-| `typeof 3 + 5`      |                 |               |                      |
-| `typeof (3 + 5)`    |                 |               |                      |
-| `typeof (3 + “3”)`  |                 |               |                      |
-| `3 == 3`            |                 |               |                      |
-| `3 == 2`            |                 |               |                      |
-| `typeof (3 == 3)`   |                 |               |                      |
-| `3 != 3`            |                 |               |                      |
-| `3 != 2`            |                 |               |                      |
-| `3 == 1 + 2`        |                 |               |                      |
-| `3 == 2 + 2`        |                 |               |                      |
-| `3 < 2 + 2`         |                 |               |                      |
-| `3 > 2 + 2`         |                 |               |                      |
+| Line                | Expected Result        | Actual Result | Were you right? Why? |
+| ------------------- | ---------------------- | ------------- | -------------------- |
+| `2 + 2`             | 4                      | 4             | maths                |
+| `5 - 3`             | 2                      | 2             |                      |
+| `3 * 6`             | 18                     | 18            |                      |
+| `10 / 2`            | 5                      | 5             |                      |
+| `5 / 2`             | 3                      | 2.5           | i did a bad guess    |
+| `5.0 / 2`           | 2.5                    | 2.5           |                      |
+| `“hello” + “world”` | hello world            | helloworld    | space magic          |
+| `“Hello” - “world”` | Helloworld             | NaN           | can't minus letters  |
+| `3 + “3”`           | 33                     | 33            |                      |
+| `typeof “hello”`    | hello                  | "string"      |                      |
+| `typeof 13`         | integer                | "number"      | fuck you             |
+| `typeof true`       | FACTS                  | "boolean"     | yeah                 |
+| `typeof 3 + 5`      | sum                    | "number5      | Mambo                |
+| `typeof (3 + 5)`    | sum                    | "number       | mambo again          |
+| `typeof (3 + “3”)`  | "string"               | "string"      |                      |
+| `3 == 3`            | true                   | true          |                      |
+| `3 == 2`            | dont lie to me (false) | false         |                      |
+| `typeof (3 == 3)`   | "boooooolean"          | "boolean"     |                      |
+| `3 != 3`            | "false"                | false         |                      |
+| `3 != 2`            | true                   | true          |                      |
+| `3 == 1 + 2`        | true                   | true          |                      |
+| `3 == 2 + 2`        | false                  | false         |                      |
+| `3 < 2 + 2`         | true                   | true          |                      |
+| `3 > 2 + 2`         | false                  | false         |                      |
 
 ## Task 2
 
@@ -90,13 +90,13 @@ whatever's in `sketch.js`. Replace it with the following:
 
 ```js
 function setup() {
-  createCanvas(400, 200)
+  createCanvas(400, 200);
 }
 
 function draw() {
-  background(100)
+  background(100);
 
-  rect(0, 0, 10, 10)
+  rect(0, 0, 10, 10);
 }
 ```
 
@@ -107,14 +107,14 @@ refer to your notes. **Add `// comments` above each line to describe it**
 **Add this line to the top of your sketch:**
 
 ```js
-var position = 100
+var position = 100;
 ```
 
 **Replace the rect line with these:**
 
 ```js
-position = position + 1
-rect(position, 0, 10, 10)
+position = position + 1;
+rect(position, 0, 10, 10);
 ```
 
 Run the sketch, and make notes below each of these questions:
@@ -128,7 +128,7 @@ Run the sketch, and make notes below each of these questions:
 Add this line at the bottom of `draw`:
 
 ```js
-console.log('The position is ' + position)
+console.log("The position is " + position);
 ```
 
 Open up the browser console again (right click -> inspect element -> console)
@@ -137,13 +137,13 @@ and see what happens. **Why?**
 Add this line at the top of your program. Add your name!
 
 ```js
-var name = 'your name here'
+var name = "your name here";
 ```
 
 Add this line to `draw`:
 
 ```js
-text('My name is' + name, 10, 30)
+text("My name is" + name, 10, 30);
 ```
 
 **What happens and why? Why isn’t there a space between the word ‘name’ and your
@@ -152,14 +152,14 @@ name? Can you add one?**
 Add this line to the top of your sketch:
 
 ```js
-var moving = true
+var moving = true;
 ```
 
 Add these lines to your sketch. Make sure it’s outside of `draw` and `setup`
 
 ```js
 function mousePressed() {
-  moving = !moving
+  moving = !moving;
 }
 ```
 
